@@ -6,7 +6,6 @@ var gulp = require('gulp');
 // load plugins
 var $ = require('gulp-load-plugins')(),
     gutil = require('gulp-util'),
-    runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -18,7 +17,8 @@ gulp.task('styles', function () {
           this.emit('end');
         }))
         .pipe($.rubySass({
-            style: 'expanded',
+            lineNumbers: true,
+            style: 'expanded', //compact, compressed
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
@@ -36,6 +36,7 @@ gulp.task('scripts', function () {
         }))
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
+        .pipe($.jshint.reporter('fail'))
         .pipe($.size());
 });
 
@@ -96,24 +97,7 @@ gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
-gulp.task('connect', function () {
-    var connect = require('connect');
-    var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('app'))
-        .use(connect.static('.tmp'))
-        .use(connect.directory('app'));
-
-    require('http').createServer(app)
-        .listen(9000)
-        .on('listening', function () {
-            console.log('Started connect web server on http://localhost:9000');
-        });
-});
-
-gulp.task('serve', ['connect', 'styles'], function () {
-    require('opn')('http://localhost:9000');
-    
+gulp.task('serve', ['styles'], function () {    
     browserSync.init({
         server: {
           baseDir: ['app', '.tmp']
@@ -140,11 +124,10 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['serve'], function () {
     var server = $.livereload();
 
     // watch for changes
-
     gulp.watch([
         'app/*.html',
         '.tmp/styles/**/*.css',
