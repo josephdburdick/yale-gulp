@@ -18,8 +18,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
     background: white;
 }
 .container, .container-fluid{
@@ -91,3 +89,47 @@ a, a:hover{
         text-decoration: underline;
     }
 }
+
+/*==========================================
+Header                         
+==========================================*/
+
+/*==========  Topper  ==========*/
+nav.topper{
+    vertical-align: middle;    
+    background: #c2d6e9;
+    a{
+        display: inline-block;
+        padding: 17px;
+        font-size: 13px; //change to rem (proxima nova bold);
+        &.dropdown{
+            &:hover{
+                background: #343434;
+            }
+        }
+    }
+}
+
+
+/*==========  Primary Nav  ==========*/
+
+nav.primary{
+    border-bottom: 4px solid #ebebeb;
+    
+    & > ul{ 
+        li{
+            width: 145px;
+
+            &:before{
+
+            }
+
+        }
+    }
+}
+
+/*-----  End of Header  ------*/
+
+
+
+
