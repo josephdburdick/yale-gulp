@@ -4,15 +4,21 @@
 var gulp = require('gulp');
 
 // load plugins
-var $ = require('gulp-load-plugins')();
-var del = require('del');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-var pagespeed = require('psi');
-var reload = browserSync.reload;
+var $ = require('gulp-load-plugins')(),
+    gutil = require('gulp-util'),
+    del = require('del'),
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync'),
+    pagespeed = require('psi'),
+    reload = browserSync.reload;
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
+        .pipe($.plumber(function(error) {
+          gutil.beep();
+          gutil.log(gutil.colors.red(error.message));
+          this.emit('end');
+        }))
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
@@ -25,6 +31,11 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
+        .pipe($.plumber(function(error) {
+          gutil.beep();
+          gutil.log(gutil.colors.red(error.message));
+          this.emit('end');
+        }))
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
@@ -35,6 +46,11 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
+        .pipe($.plumber(function(error) {
+          gutil.beep();
+          gutil.log(gutil.colors.red(error.message));
+          this.emit('end');
+        }))
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
         .pipe($.uglify())
