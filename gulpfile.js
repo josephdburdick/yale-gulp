@@ -6,10 +6,8 @@ var gulp = require('gulp');
 // load plugins
 var $ = require('gulp-load-plugins')(),
     gutil = require('gulp-util'),
-    del = require('del'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
-    pagespeed = require('psi'),
     reload = browserSync.reload;
 
 gulp.task('styles', function () {
@@ -25,7 +23,7 @@ gulp.task('styles', function () {
         }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('.tmp/styles'))
-        .pipe(reload({stream: true}))
+        .pipe(browserSync.reload({stream:true}))
         .pipe($.size());
 });
 
@@ -115,6 +113,13 @@ gulp.task('connect', function () {
 
 gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
+    
+    browserSync.init({
+        server: {
+          baseDir: ['app', '.tmp']
+        },
+        notify: false
+    });
 });
 
 // inject bower components
