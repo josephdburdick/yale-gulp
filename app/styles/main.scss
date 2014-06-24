@@ -4,7 +4,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-@import "colors";
+/* === Grid === */
+@import 'breakpoints';
+@import 'grid'; 
+@import 'colors';
 
 .browsehappy {
     margin: 0.2em 0;
@@ -26,4 +29,65 @@ body {
 footer{
     background: $grey-dark;
     color: white;
+}
+
+
+/* === Helpers === */
+*             { transition: all .15s ease-in-out; }
+body          { font-weight: 400; font-family: "PT Sans";}
+img           { width: 100%; max-width: auto; height: auto; }
+.upcase       { text-transform: uppercase; }
+.inline-block { display:inline-block; }
+.fa           { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; }
+.nav-active-item
+              { color: white;text-decoration: none;background: $gray;text-transform: uppercase;letter-spacing: 1px;text-shadow: none; }
+
+.ellipsis {
+    aside &{
+        &:after{
+            @extend .fa;
+            content: "\f141";
+            float: right;
+            font-size: 150%;
+            color: rgba(0,0,0,0.15);
+            text-shadow: 0px 1px #fff;
+        }    
+    }
+}
+.arrow-up{
+    $size: 5px;
+    &:after, &:before{
+        bottom: 100%;
+        left: 25px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    &:after{
+        border-color: rgba(85, 85, 85, 0);
+        border-bottom-color: #555555;
+        border-width: $size;
+        margin-left: -$size;
+    }
+    &:before{
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #ffffff;
+        border-width: $size+1;
+        margin-left: -($size+1);
+    }
+}
+
+
+/* === Variables === */
+$defaultSpeed: .5s;
+$defaultEase: ease-in-out;
+a, a:hover{
+    color: #000;
+    text-decoration: none;
+    .content &{
+        text-decoration: underline;
+    }
 }
