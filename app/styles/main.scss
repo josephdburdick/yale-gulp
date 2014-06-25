@@ -3,26 +3,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 
 /* === Grid === */
 @import 'breakpoints';
 @import 'grid'; 
 @import 'colors';
+@import 'fontsize';
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* Space out content a bit */
-body {
-    background: white;
-}
-.container, .container-fluid{
-    max-width: 1128px;
-}
+body             { background: white; }
+.container, 
+.container-fluid { max-width: 1128px; }
 
 footer{
     background: $grey-dark;
@@ -40,18 +31,6 @@ img           { width: 100%; max-width: auto; height: auto; }
 .nav-active-item
               { color: white;text-decoration: none;background: $gray;text-transform: uppercase;letter-spacing: 1px;text-shadow: none; }
 
-.ellipsis {
-    aside &{
-        &:after{
-            @extend .fa;
-            content: "\f141";
-            float: right;
-            font-size: 150%;
-            color: rgba(0,0,0,0.15);
-            text-shadow: 0px 1px #fff;
-        }    
-    }
-}
 .arrow-up{
     $size: 5px;
     &:after, &:before{
@@ -109,6 +88,13 @@ nav.topper{
         }
     }
 }
+#header-search-expand{
+    display: inline-block;
+    .search-field-container{
+        display:none;
+    }    
+}
+
 
 
 /*==========  Primary Nav  ==========*/
@@ -117,19 +103,97 @@ nav.primary{
     border-bottom: 4px solid #ebebeb;
     
     & > ul{ 
+        list-style: none;
+        margin-bottom: 0;
         li{
-            width: 145px;
-
-            &:before{
-
-            }
-
+            $primaryNavItemWidth: 145px;
+            width: $primaryNavItemWidth;
+            display: inline-block;
+            
+            a{
+                display: inline-block;
+                width: $primaryNavItemWidth;
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    border-left: 1px solid #ebebeb;
+                }
+            }    
         }
+
+    }
+}
+
+/*==========  Page Header  ==========*/
+
+.page-header{
+    margin: 0;
+    background: $brand-primary-dark;
+    color: white;
+    padding: 2.5rem 0;
+    h1{
+        margin: 0;
     }
 }
 
 /*-----  End of Header  ------*/
 
 
+/*=============================
+=            Aside            =
+=============================*/
+
+aside{
+    nav{
+        & > ul{
+            list-style: none;
+            padding: 0;
+        }
+    }
+}
+
+
+/*-----  End of Aside  ------*/
+
+
+
+
+
+/*===============================
+=            Article            =
+===============================*/
+    
+.accessibility-bar{
+    overflow: hidden;
+    border-bottom: 1px solid #7f7f7f;
+    & > ul{
+        display: flex;
+        list-style: none;
+        padding: 0 0 12px;
+        li{
+            a{
+                display: inline-block;
+                padding: 0 10px;
+                color: #7f7f7f;
+            }            
+        }
+    }
+}
+.article-body{
+    clear: both;
+
+    ul{
+        padding-left: 0.9375rem;
+        margin-left: 0.9375rem;
+    }
+
+    h3{
+        @include font-size(4);
+    }
+}
+
+/*-----  End of Article  ------*/
+
+    
 
 
