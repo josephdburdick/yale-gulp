@@ -23,14 +23,29 @@
     <header class="main">
         <nav class="topper">
             <div class="container-fluid">
-                <div class="pull-left">
-                    <a href="#">Yale School of Medicine</a>  <span class="pipe"></span> <a href="#">Institutional Planning &amp; Communications</a>
+                <div class="pull-left topper-breadcrumb">
+                    <a href="#">Yale School of Medicine</a><a href="#">Institutional Planning &amp; Communications</a>
                 </div>
                 <div class="pull-right">
-                    <a href id="information-for-menu" class="dropdown">Information For <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown" id="information-for-menu">
+                      <a href class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        Information For
+                        <i class="fa fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prospective Students</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Current Students &amp;<br> Trainees</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Faculty &amp; Staff</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patients &amp;<br> Physicians</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Researchers</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Postdocs</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alumni &amp; Friends</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other Visitors</a></li>
+                      </ul>
+                    </div>
 
                     <form id="header-search-expand">
-                        <label>Search </label>
+                        <label>Search</label>
                         <div class="search-field-container">
                             <input type="text" class="search-field">
                         </div>
@@ -44,27 +59,29 @@
                 <h1 class="title-section">Web Group</h1>
             </div>
         </section>
-        <nav class="primary">
-
-            <ul class="container-fluid">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Site Building &amp;<br>Editing</a></li>
-                <li><a href="#">Applications</a></li>
-                <li><a href="#">Tridion Support</a></li>
-                <li><a href="#">Policies &amp;<br>Guidelines</a></li>
-            </ul>
+        <nav class="nav-primary">
+            <div class="row">
+                <ul class="container-fluid menu" id="primary-menu-navigation">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li id="nav-primary-selected"><a href="#">Site Building &amp;<br>Editing</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Tridion Support</a></li>
+                    <li><a href="#">Policies &amp;<br>Guidelines</a></li>
+                </ul>    
+            </div>
         </nav>
     </header>
     <main class="container-fluid">
         <div class="row">
-            <aside class="col-lg-4">
-                <nav class="tiered-subnavigation module-primary">
-                    <header>
-                        <h4><a href="#">Applications</a></h4>    
-                    </header>
+            <aside class="col-md-4">
+                <nav class="sidebar-nav module module-primary">
                     <ul>
-                        <li><a href="#">Flyerboard</a></li>
+                        <li><a href="#" class="nav-parent-item">Applications</a></li>
+                        <li><a href="#" class="nav-parent-item">Applications 2</a></li>
+                        <li><a href="#" class="nav-parent-item last">Applications 3</a></li>
+
+                        <li><a href="#" class="nav-active-item">Flyerboard</a></li>
                         <li><a href="#">Faculty Profile System</a></li>
                         <li><a href="#">News System</a></li>
                         <li><a href="#">Clinical Trials</a></li>
@@ -75,7 +92,7 @@
                     </ul>
                 </nav>
 
-                <nav class="module-related-links module-primary">
+                <nav class="module-related-links module module-primary">
                     <h4>Related Links</h4>
                     <ul>
                         <li><a href="#" class="external">Weekly Digest</a></li>
@@ -89,7 +106,7 @@
                         <li><a href="#" class="external">Ask Yale Medicine</a></li>
                     </ul>
                 </nav>
-                <div class="module-search module-primary">
+                <div class="module-search module module-primary">
                     <h4>Find a Person <i class="fa fa-search"></i></h4>
                     <div class="input-group">
                       <input type="text" class="form-control">
@@ -98,7 +115,7 @@
                       </span>
                     </div><!-- /input-group -->
                 </div>
-                <div class="module-link module-secondary">
+                <div class="module-link module module-secondary">
                     <a href="#">
                         <span class="fa-stack fa-lg">
                           <i class="fa fa-circle fa-stack-2x"></i>
@@ -111,7 +128,7 @@
             </aside>
             <!-- / sidebar -->
 
-            <article class="col-lg-8">
+            <article class="col-md-8">
                 <div class="accessibility-bar">
                     <ul class="pull-left share-menu">
                         <li><a href="#"><i class="fa fa-facebook"></i> share</a></li>
@@ -159,30 +176,34 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <div class="ysm-shield-container">
                                 <img src="images/ysm_shield.svg">
+                                <div class="upcase text-center">
+                                    Education
+                                    Patient Care
+                                    Research
+                                </div>
                             </div>
-                            <div class="upcase text-center">
-                                Education
-                                Patient Care
-                                Research
-                            </div>
+                            
                         </div>
-                        <div class="col-lg-6">
-                            <address>
+                        <div class="col-md-6 footer-address">
+                            
                                 <strong>Web Group</strong>
-                                1 Church St., Suite 300
-                                New Haven, CT 06510-3330
-                                T.  203.737.7932
-                                F.  203.785.4327v                             
+                                <address>
+                                    1 Church St., Suite 300
+                                    New Haven, CT 06510-3330
+                                </address>
+                                <div class="phone">T.  203.737.7932</div>
+                                <div class="fax">F.  203.785.4327</div>
+
                             </address>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-md-4 footer-links">
                     <a href>Contact Us</a>
                     <a href>Maps &amp; directions</a>
                     <a href>Find a Physician</a>
@@ -197,7 +218,7 @@
                     <a href>Privacy Policy</a>
                     <a href class="external">Yale university</a>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-md-4 Grid Grid--bottom">
                     <img src="images/ysm_wordmark.svg">
                     &copy; 2014 Yale School of Medicine. Updated 02/13/14.
                 </div>
@@ -234,7 +255,8 @@
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-
+    
+    <script src="scripts/vendor/jquery.spasticnav.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
