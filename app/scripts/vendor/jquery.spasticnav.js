@@ -17,16 +17,16 @@
 		 		blob,
 		 		reset;
 		 		
-		 	$('<li id="blob"></li>').css({
+		 	$('<li id="primary-nav-blob"></li>').css({
 		 		width : currentPageItem.outerWidth(),
 		 		height : currentPageItem.outerHeight() + options.overlap,
 		 		left : currentPageItem.position().left,
 		 		top : currentPageItem.position().top - options.overlap / 2
 		 	}).appendTo(this);
 		 	
-		 	blob = $('#blob', nav);
+		 	blob = $('#primary-nav-blob', nav);
 					 	
-			$('li:not(#blob)', nav).hover(function() {
+			$('li:not(#primary-nav-blob)', nav).hover(function() {
 				// mouse over
 				clearTimeout(reset);
 				blob.animate(

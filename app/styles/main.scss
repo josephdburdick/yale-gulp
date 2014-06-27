@@ -14,7 +14,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 
 
-body             { background: white; }
+body             { background: white; font-family: "More Pro"}
 .container, 
 .container-fluid { max-width: 1128px; }
 
@@ -91,10 +91,10 @@ a, a:hover{
 
 /* === Bootstrap overrides === */
 // show dropdown on hover
-.dropdown-toggle:hover + ul.dropdown-menu {
-   display: block; 
-   transition: all $defaultSpeed 1s;  
-}
+// .dropdown-toggle:hover + ul.dropdown-menu {
+//    display: block; 
+//    transition: all $defaultSpeed 1s;  
+// }
 
 /*==========================================
 Header                         
@@ -181,9 +181,25 @@ nav.topper{
 
 
 /*==========  Primary Nav  ==========*/
-#blob{
+#primary-menu-container{
+    position: relative;
+    .dropdown-menu-large{
+        margin-top:4px;
+        width:100%;
+        box-shadow: none;
+    }
+    &.dropdown-active{
+        .dropdown-menu{
+            display: block;
+            opacity: 1;
+            top: auto;
+        }
+    }
+}
+#primary-nav-blob{
     position: absolute;
     border-bottom: 4px solid $brand-primary;
+    z-index: 9;
 }
 .nav-primary{
     border-bottom: 4px solid $gray-lighter;
@@ -191,20 +207,20 @@ nav.topper{
     .menu{ 
         list-style: none;
         margin-bottom: 0;
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
         li{
             $primaryNavItemWidth: 145px;
             width: $primaryNavItemWidth;
             display: block;
             float: left;
             vertical-align: top;
-            height: 100px;
+            z-index: 10;
             a{
                 display: inline-block;
                 width: $primaryNavItemWidth;
                 padding: 30px 12px;
                 position: relative;
-                height: 100px;
                 &:before{
                     content: " ";
                     display: block;
@@ -301,7 +317,6 @@ main.container-fluid{
     padding: 3.125rem 15px 95px;
 }
 .content-body{
-    clear: both;
     ul{
         padding-left: 0.9375rem;
         margin-left: 0.9375rem;
@@ -333,17 +348,30 @@ main.container-fluid{
                 display: block;
                 padding: 15px 40px;
                 &:hover{
-                    background: #eee;
+                    background: none;
                 }
             }
         }
     }
     & > h4{
         margin: 0;
-        padding: 1.875rem 2.8125rem 1.25rem;
+        padding: 1.875rem 4.8125rem 1.25rem;
+        text-transform: uppercase;
+        @include font-size(1.4);
     }
     .input-group{
-        padding: 1.875rem 2.8125rem 1.25rem;
+        padding: 30px 2.8125rem;
+    }
+    &.module-related-links{
+        padding: 30px 4.8125rem;
+        h4, 
+        ul > li a{
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        ul > li:last-child a{
+            margin-bottom: 0;
+        }
     }
 
 }

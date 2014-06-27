@@ -1,264 +1,319 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>Yale</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<head>
+		<meta charset="utf-8">
+		<title>Yale</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        
 
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+		<link rel="stylesheet" href="styles/main.css">
+		<script src="bower_components/modernizr/modernizr.js"></script>
 
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<!-- Typekit JS -->
+		<script type="text/javascript" src="//use.typekit.net/xeo3cyw.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-    <header class="main">
-        <nav class="topper">
-            <div class="container-fluid">
-                <div class="pull-left topper-breadcrumb">
-                    <a href="#">Yale School of Medicine</a><a href="#">Institutional Planning &amp; Communications</a>
-                </div>
-                <div class="pull-right">
-                    <div class="dropdown" id="information-for-menu">
-                      <a href class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                        Information For
-                        <i class="fa fa-caret-down"></i>
-                      </a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prospective Students</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Current Students &amp;<br> Trainees</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Faculty &amp; Staff</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patients &amp;<br> Physicians</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Researchers</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Postdocs</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alumni &amp; Friends</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other Visitors</a></li>
-                      </ul>
-                    </div>
+	<header class="main">
+		<nav class="topper">
+			<div class="container-fluid">
+				<div class="pull-left topper-breadcrumb">
+					<a href="#">Yale School of Medicine</a><a href="#">Institutional Planning &amp; Communications</a>
+				</div>
+				<div class="pull-right">
+					<div class="dropdown" id="information-for-menu">
+					  <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+						Information For
+						<i class="fa fa-caret-down"></i>
+					  </a>
+					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prospective Students</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Current Students &amp;<br> Trainees</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Faculty &amp; Staff</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patients &amp;<br> Physicians</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Researchers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Postdocs</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Alumni &amp; Friends</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other Visitors</a></li>
+					  </ul>
+					</div>
 
-                    <form id="header-search-expand">
-                        <label>Search</label>
-                        <div class="search-field-container">
-                            <input type="text" class="search-field">
-                        </div>
-                        <a href class="btn search-field-submit" type="submit"><i class="fa fa-search"></i></a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <section class="page-header">
-            <div class="container-fluid">
-                <h1 class="title-section">Web Group</h1>
-            </div>
-        </section>
-        <nav class="nav-primary">
-            <div class="row">
-                <ul class="container-fluid menu" id="primary-menu-navigation">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li id="nav-primary-selected"><a href="#">Site Building &amp;<br>Editing</a></li>
-                    <li><a href="#">Applications</a></li>
-                    <li><a href="#">Tridion Support</a></li>
-                    <li><a href="#">Policies &amp;<br>Guidelines</a></li>
-                </ul>    
-            </div>
-        </nav>
-    </header>
-    <main class="container-fluid">
-        <div class="row">
-            <aside class="col-md-4">
-                <nav class="sidebar-nav module module-primary">
-                    <ul>
-                        <li><a href="#" class="nav-parent-item">Applications</a></li>
-                        <li><a href="#" class="nav-parent-item">Applications 2</a></li>
-                        <li><a href="#" class="nav-parent-item last">Applications 3</a></li>
+					<form id="header-search-expand">
+						<label>Search</label>
+						<div class="search-field-container">
+							<input type="text" class="search-field">
+						</div>
+						<a href="#" class="btn search-field-submit"><i class="fa fa-search"></i></a>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<section class="page-header">
+			<div class="container-fluid">
+				<h1 class="title-section">Web Group</h1>
+			</div>
+		</section>
+		<nav class="nav-primary" id="primary-menu-container">
+			<div class="row">
+				<ul class="container-fluid menu" id="primary-menu-navigation">
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Services</a></li>
+					<li id="nav-primary-selected"><a href="#">Site Building &amp;<br>Editing</a></li>
+					<li><a href="#">Applications</a></li>
+					<li><a href="#">Tridion Support</a></li>
+					<li><a href="#">Policies &amp;<br>Guidelines</a></li>
+				</ul>
+				<div class="dropdown-menu dropdown-menu-large row drawer" role="menu">
+					<div class="container-fluid">
+					  <ul class="Grid">
+						<li class="Grid-cell" data-id="dd-about-us">
+						  <ul class="nav">
+							<li><a href="applications.html">From the Dean</a></li>
+							<li><a href="applications.html">A History of the Web at YSM </a></li>
+							<li><a href="applications.html">Web Group News</a></li>
+						  </ul>
+						</li>
+						<li class="Grid-cell" data-id="dd-services">
+						 
+						</li>
+						<li class="Grid-cell" data-id="dd-sitebuilding-editing">
+						  <ul class="nav">
+							<li><a href="applications.html">Request a Website</a></li>
+							<li><a href="applications.html">Lab Sites</a></li>
+							<li><a href="applications.html">Editing Service</a></li>
+							<li><a href="applications.html">Site Review Service</a></li>
+							<li><a href="applications.html">Web Group Fees</a></li>
+							<li><a href="applications.html">FAQs</a></li>
+							<li><a href="applications.html">Comprehensive List of Websites Document Library</a></li>
+						  </ul>
+						</li>
+						<li class="Grid-cell" data-id="dd-applications">
+						  <ul class="nav">
+							<li><a href="app-Flyerboard.html">Flyerboard</a></li>
+							<li><a href="app-FacultyProfileSystem.html">Faculty Profile System</a></li>
+							<li><a href="app-NewsSystem.html">News System</a></li>
+							<li><a href="app-ClinicalTrials.html">Clinical Trials</a></li>
+							<li><a href="app-ResourceScheduler.html">Resource Scheduler</a></li>
+							<li><a href="app-EventCalendar.html">Event Calendar</a></li>
+							<li><a href="app-FormBuilder.html">Form Builder</a></li>
+							<li><a href="app-MediaLibrary.html">Media Library</a></li>
+						  </ul>
+						</li>
+						<li class="Grid-cell" data-id="dd-tridion-support">
+						  <ul class="nav">
+							<li><a href="applications.html">Tridion Guide</a></li>
+							<li><a href="applications.html">Component and Template Instructions</a></li>
+							<li><a href="applications.html">SiteImprove</a></li>
+							<li><a href="applications.html">Info for Web Editors </a></li>
+							<li><a href="applications.html">List of Web Editors</a></li>
+						  </ul>
+						</li>
+						<li class="Grid-cell" data-id="dd-policies-guidelines">
+						  <ul class="nav">
+							<li><a href="applications.html">Publishing Content</a></li>
+							<li><a href="applications.html">Image Posting Guidelines </a></li>
+							<li><a href="applications.html">Social Media Guidelines </a></li>
+							<li><a href="applications.html">Lab Websites</a></li>
+							<li><a href="applications.html">Access to Tridion</a></li>
+							<li><a href="applications.html">Privacy Policy</a></li>
+						  </ul>
+						</li>
+					  </ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main class="container-fluid">
+		<div class="row">
+			<aside class="col-md-4">
+				<nav class="sidebar-nav module module-primary">
+					<ul>
+						<li><a href="#" class="nav-parent-item">Applications</a></li>
+						<li><a href="#" class="nav-parent-item">Applications 2</a></li>
+						<li><a href="#" class="nav-parent-item last">Applications 3</a></li>
 
-                        <li><a href="#" class="nav-active-item">Flyerboard</a></li>
-                        <li><a href="#">Faculty Profile System</a></li>
-                        <li><a href="#">News System</a></li>
-                        <li><a href="#">Clinical Trials</a></li>
-                        <li><a href="#">Resource Scheduler</a></li>
-                        <li><a href="#">Event Calendar</a></li>
-                        <li><a href="#">Form Builder</a></li>
-                        <li><a href="#">Media Library</a></li>
-                    </ul>
-                </nav>
+						<li><a href="#" class="nav-active-item">Flyerboard</a></li>
+						<li><a href="#">Faculty Profile System</a></li>
+						<li><a href="#">News System</a></li>
+						<li><a href="#">Clinical Trials</a></li>
+						<li><a href="#">Resource Scheduler</a></li>
+						<li><a href="#">Event Calendar</a></li>
+						<li><a href="#">Form Builder</a></li>
+						<li><a href="#">Media Library</a></li>
+					</ul>
+				</nav>
 
-                <nav class="module-related-links module module-primary">
-                    <h4>Related Links</h4>
-                    <ul>
-                        <li><a href="#" class="external">Weekly Digest</a></li>
-                        <li><a href="#" class="external">How To Post to the Calendar</a></li>
-                        <li><a href="#" class="external">Publications</a></li>
-                        <li><a href="#" class="external">News and Publications from Across Yale</a></li>
-                        <li><a href="#" class="external">YSM Style Guide</a></li>
-                        <li><a href="#" class="external">YSM Institutional Planning &amp; Communications</a></li>
-                        <li><a href="#" class="external">Yale Podcasts</a></li>
-                        <li><a href="#" class="external">Yale Medical Experts</a></li>
-                        <li><a href="#" class="external">Ask Yale Medicine</a></li>
-                    </ul>
-                </nav>
-                <div class="module-search module module-primary">
-                    <h4>Find a Person <i class="fa fa-search"></i></h4>
-                    <div class="input-group">
-                      <input type="text" class="form-control">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                      </span>
-                    </div><!-- /input-group -->
-                </div>
-                <div class="module-link module module-secondary">
-                    <a href="#">
-                        <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
-                        </span> 
-                        
-                        Publications
-                    </a>
-                </div>
-            </aside>
-            <!-- / sidebar -->
+				<nav class="module-related-links module module-primary">
+					<h4>Related Links</h4>
+					<ul>
+						<li><a href="#" class="external">Weekly Digest</a></li>
+						<li><a href="#" class="external">How To Post to the Calendar</a></li>
+						<li><a href="#" class="external">Publications</a></li>
+						<li><a href="#" class="external">News and Publications from Across Yale</a></li>
+						<li><a href="#" class="external">YSM Style Guide</a></li>
+						<li><a href="#" class="external">YSM Institutional Planning &amp; Communications</a></li>
+						<li><a href="#" class="external">Yale Podcasts</a></li>
+						<li><a href="#" class="external">Yale Medical Experts</a></li>
+						<li><a href="#" class="external">Ask Yale Medicine</a></li>
+					</ul>
+				</nav>
+				<div class="module-search module module-primary">
+					<h4>Find a Person <i class="fa fa-search"></i></h4>
+					<div class="input-group">
+					  <input type="text" class="form-control">
+					  <span class="input-group-btn">
+						<button class="btn btn-default" type="button">Go!</button>
+					  </span>
+					</div><!-- /input-group -->
+				</div>
+				<div class="module-link module module-secondary">
+					<a href="#">
+						<span class="fa-stack fa-lg">
+						  <i class="fa fa-circle fa-stack-2x"></i>
+						  <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+						</span> 
+						
+						Publications
+					</a>
+				</div>
+			</aside>
+			<!-- / sidebar -->
 
-            <article class="col-md-8">
-                <div class="accessibility-bar">
-                    <ul class="pull-left share-menu">
-                        <li><a href="#"><i class="fa fa-facebook"></i> share</a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i> tweet</a></li>
-                        <li><a href="#"><i class="fa fa-envelope"></i> email</a></li>
-                        <li><a href="#"><i class="fa fa-print"></i> print</a></li>
-                    </ul>
-                    <ul class="pull-right text-size-control">
-                        <li><a href="#">T-</a></li>
-                        <li><a href="#">T</a></li>
-                        <li><a href="#">T+</a></li>
-                    </ul>
-                </div>
+			<article class="col-md-8">
+				<div class="accessibility-bar">
+					<ul class="pull-left share-menu">
+						<li><a href="#"><i class="fa fa-facebook"></i> share</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> tweet</a></li>
+						<li><a href="#"><i class="fa fa-envelope"></i> email</a></li>
+						<li><a href="#"><i class="fa fa-print"></i> print</a></li>
+					</ul>
+					<ul class="pull-right text-size-control">
+						<li><a href="#">T-</a></li>
+						<li><a href="#">T</a></li>
+						<li><a href="#">T+</a></li>
+					</ul>
+				</div>
 
-                <section class="content-body">
-                    <h3>Flyerboard</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p><strong>Features include:</strong></p>
-                    <ul>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    </ul>
-                    <p><strong>Administrators:</strong></p>
-                    <ul>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                        <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    </ul>
-                </section>
-            </article>
-        </div> <!-- /.row -->
-    </main>
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="ysm-shield-container">
-                                <img src="images/ysm_shield.svg">
-                                <div class="upcase text-center">
-                                    Education
-                                    Patient Care
-                                    Research
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-md-6 footer-address">
-                            
-                                <strong>Web Group</strong>
-                                <address>
-                                    1 Church St., Suite 300
-                                    New Haven, CT 06510-3330
-                                </address>
-                                <div class="phone">T.  203.737.7932</div>
-                                <div class="fax">F.  203.785.4327</div>
+				<section class="content-body">
+					<h3>Flyerboard</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<p><strong>Features include:</strong></p>
+					<ul>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+					</ul>
+					<p><strong>Administrators:</strong></p>
+					<ul>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+						<li>Duis aute irure dolor in reprehenderit in voluptate</li>
+					</ul>
+				</section>
+			</article>
+		</div> <!-- /.row -->
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="ysm-shield-container">
+								<img src="images/ysm_shield.svg" alt="Yale School of Medicine Shield">
+								<div class="upcase text-center">
+									Education
+									Patient Care
+									Research
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-md-6 footer-address">
+							
+							<strong>Web Group</strong>
+							<address>
+								1 Church St., Suite 300
+								New Haven, CT 06510-3330
+							</address>
+							<div class="phone">T.  203.737.7932</div>
+							<div class="fax">F.  203.785.4327</div>
 
-                            </address>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 footer-links">
-                    <a href>Contact Us</a>
-                    <a href>Maps &amp; directions</a>
-                    <a href>Find a Physician</a>
-                    <a href>Calendar</a>
-                    <a href>YSM Phonebook</a>
-                    <a href>Room Reservation</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 footer-links">
+					<a href="#">Contact Us</a>
+					<a href="#">Maps &amp; directions</a>
+					<a href="#">Find a Physician</a>
+					<a href="#">Calendar</a>
+					<a href="#">YSM Phonebook</a>
+					<a href="#">Room Reservation</a>
 
-                    <a href>library &amp; reference</a>
-                    <a href>intranet</a>
-                    <a href>support us</a>
-                    <a href>Site Editor</a>
-                    <a href>Privacy Policy</a>
-                    <a href class="external">Yale university</a>
-                </div>
-                <div class="col-md-4 Grid Grid--bottom">
-                    <img src="images/ysm_wordmark.svg">
-                    &copy; 2014 Yale School of Medicine. Updated 02/13/14.
-                </div>
-            </div>
-        </div>
-    </footer>
+					<a href="#">library &amp; reference</a>
+					<a href="#">intranet</a>
+					<a href="#">support us</a>
+					<a href="#">Site Editor</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#" class="external">Yale university</a>
+				</div>
+				<div class="col-md-4 Grid Grid--bottom">
+					<img src="images/ysm_wordmark.svg" alt="Yale School of Medicine">
+					&copy; 2014 Yale School of Medicine. Updated 02/13/14.
+				</div>
+			</div>
+		</div>
+	</footer>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
-    <!-- endbuild -->
-    
-    <script src="scripts/vendor/jquery.spasticnav.js"></script>
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+	<!-- build:js scripts/plugins.js -->
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+	<!-- endbuild -->
+	
+	<script src="scripts/vendor/jquery.spasticnav.js"></script>
+	<!-- build:js scripts/main.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
 </body>
 </html>
