@@ -91,10 +91,9 @@ a, a:hover{
 
 /* === Bootstrap overrides === */
 // show dropdown on hover
-// .dropdown-toggle:hover + ul.dropdown-menu {
-//    display: block; 
-//    transition: all $defaultSpeed 1s;  
-// }
+.dropdown-toggle:hover + ul.dropdown-menu {
+   display: block; 
+}
 
 /*==========================================
 Header                         
