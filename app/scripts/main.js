@@ -9,7 +9,15 @@ function interfaces(){
 	});
 }
 
+function polyfills(){
+	$('.footer-links').columnizeList({
+		columnCount: 2,
+		columnGap: 20
+	});
+}
+
 $(document).ready(function(){
 	interfaces();
+	polyfills();
 });
 

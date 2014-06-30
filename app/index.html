@@ -131,7 +131,7 @@
 	<main class="container-fluid">
 		<div class="row">
 			<aside class="col-md-4">
-				<nav class="sidebar-nav module module-primary">
+				<nav class="module sidebar-nav module-primary">
 					<ul>
 						<li><a href="#" class="nav-parent-item">Applications</a></li>
 						<li><a href="#" class="nav-parent-item">Applications 2</a></li>
@@ -148,7 +148,7 @@
 					</ul>
 				</nav>
 
-				<nav class="module-related-links module module-primary">
+				<nav class="module module-related-links module-primary">
 					<h4>Related Links</h4>
 					<ul>
 						<li><a href="#" class="external">Weekly Digest</a></li>
@@ -200,7 +200,37 @@
 				</div>
 
 				<section class="content-body">
-					<h3>Flyerboard</h3>
+					<h3>This is header text and it's going to be wrapping around for 2 lines.</h3>
+					<figure>
+						<img src="http://placehold.it/360x275">
+						<figcaption>This is the caption text that can also wrap around for 2 lines. This is the caption text that can also wrap around for 2 lines</figcaption>						
+					</figure>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<figure>
+						<img src="http://placehold.it/360x275">
+						<figcaption>This is the caption text that can also wrap around for 2 lines</figcaption>						
+					</figure>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>. Ut enim ad minim veniam,
@@ -235,9 +265,9 @@
 				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="ysm-shield-container">
-								<img src="images/ysm_shield.svg" alt="Yale School of Medicine Shield">
-								<div class="upcase text-center">
+							<div class="footer-logo-container">
+								<img src="images/ysm_shield.svg" alt="Yale School of Medicine Shield" class="footer-logo">
+								<div class="upcase text-center footer-logo-copy">
 									Education
 									Patient Care
 									Research
@@ -250,7 +280,7 @@
 							<strong>Web Group</strong>
 							<address>
 								1 Church St., Suite 300
-								New Haven, CT 06510-3330
+								New Haven, CT 06510
 							</address>
 							<div class="phone">T.  203.737.7932</div>
 							<div class="fax">F.  203.785.4327</div>
@@ -258,24 +288,30 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 footer-links">
-					<a href="#">Contact Us</a>
-					<a href="#">Maps &amp; directions</a>
-					<a href="#">Find a Physician</a>
-					<a href="#">Calendar</a>
-					<a href="#">YSM Phonebook</a>
-					<a href="#">Room Reservation</a>
+				<div class="col-md-4">
+					<div class="footer-links">
+						<a href="#">Contact Us</a>
+						<a href="#">Maps &amp; directions</a>
+						<a href="#">Find a Physician</a>
+						<a href="#">Calendar</a>
+						<a href="#">YSM Phonebook</a>
+						<a href="#">Room Reservation</a>
 
-					<a href="#">library &amp; reference</a>
-					<a href="#">intranet</a>
-					<a href="#">support us</a>
-					<a href="#">Site Editor</a>
-					<a href="#">Privacy Policy</a>
-					<a href="#" class="external">Yale university</a>
+						<a href="#">Library &amp; Reference</a>
+						<a href="#">Intranet</a>
+						<a href="#">Support Us</a>
+						<a href="#">Site Editor</a>
+						<a href="#">Privacy Policy</a>
+						<a href="#" class="external">Yale University</a>		
+					</div>
 				</div>
 				<div class="col-md-4 Grid Grid--bottom">
-					<img src="images/ysm_wordmark.svg" alt="Yale School of Medicine">
-					&copy; 2014 Yale School of Medicine. Updated 02/13/14.
+					<div class="footer-wordmark">
+						<img src="images/ysm_wordmark.svg" alt="Yale School of Medicine" class="footer-wordmark-image">
+						<div class="footer-copyright">
+							&copy; 2014 Yale School of Medicine. Updated 02/13/14.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -311,6 +347,7 @@
 	<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
 	<!-- endbuild -->
 	
+	<script src="scripts/vendor/jquery.columnize.js"></script>
 	<script src="scripts/vendor/jquery.spasticnav.js"></script>
 	<!-- build:js scripts/main.js -->
 	<script src="scripts/main.js"></script>
